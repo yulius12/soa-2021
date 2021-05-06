@@ -33,7 +33,7 @@ app.get("/",cekapikey,function (req,res) {
     console.log(req.isUserAktif)
     return res.render("displaymenu",{type:"Indonesian",menu:["batagor","rujak","kluntung"]})
 })
-app.get("/superman",cekapikey,function (req,res) {
+app.get("/superman",function (req,res) {
     return res.send("superman")
 })
 

@@ -10,7 +10,9 @@ const useraktif=[{
     "password":"admin",
     "api_key":"abcde01234"
 }]
-
+app.get("/superman",function (req,res) {
+    return res.send("superman")
+})
 app.use(express.urlencoded({extended:true}));
 function cekapikey(req,res,next) {
     if (!req.headers["x-api-key"]) {
@@ -33,9 +35,7 @@ app.get("/",cekapikey,function (req,res) {
     console.log(req.isUserAktif)
     return res.render("displaymenu",{type:"Indonesian",menu:["batagor","rujak","kluntung"]})
 })
-app.get("/superman",function (req,res) {
-    return res.send("superman")
-})
+
 
 app.post("/api/register",function (req,res) {
     const username =req.body.username;

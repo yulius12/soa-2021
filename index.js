@@ -54,6 +54,6 @@ app.post("/api/register",function (req,res) {
 app.use("/api/pengguna",pengguna);
 app.use("/api/resep",resep);
 app.use("/api/aksesapi",aksesapi);
-app.listen(3000,function () {
+app.listen(port,function () {
     console.log("Listening to port 3000")
 })
